@@ -1,0 +1,855 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral#"
+     xml:base="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral"
+     xmlns:anno="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:AnnotationVocabulary="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/AnnotationVocabulary/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+     xmlns:prov="http://www.w3.org/ns/prov#">
+    <owl:Ontology rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral">
+        <owl:imports rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_TEAM_CEREBRAL"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
+        <owl:imports rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/20160201/Utilities/Analytics/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithActivationFunction -->
+
+    <owl:ObjectProperty rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithActivationFunction">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/WeightInitializationAlgorithm"/>
+        <rdfs:range rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ActivationFunction"/>
+        <rdfs:isDefinedBy>Artificial Neural Network Ontology</rdfs:isDefinedBy>
+        <skos:definition>Indicates that a weight initialization algorithm is compatible with a particular activation function.</skos:definition>
+        <skos:prefLabel>is compatible with activation function</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithLayerType -->
+
+    <owl:ObjectProperty rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithLayerType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/WeightInitializationAlgorithm"/>
+        <rdfs:range rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Layer"/>
+        <rdfs:isDefinedBy>Artificial Neural Network Ontology</rdfs:isDefinedBy>
+        <skos:definition>Indicates that a weight initialization algorithm is compatible with a particular layer type.</skos:definition>
+        <skos:prefLabel>is compatible with layer type</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/hasDepth -->
+
+    <owl:DatatypeProperty rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/hasDepth">
+        <rdfs:domain rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ArtificialNeuralNetwork"/>
+        <rdfs:range rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/hasMaximumCompatibleDepth -->
+
+    <owl:DatatypeProperty rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/hasMaximumCompatibleDepth">
+        <rdfs:domain rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/WeightInitializationAlgorithm"/>
+        <rdfs:range rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artificial Neural Network Ontology</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indicates the maximum artificial neural network depth with which a weight initialization algorithm can be used.</skos:definition>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has maximum compatible depth</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/hasMinimumCompatibleDepth -->
+
+    <owl:DatatypeProperty rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/hasMinimumCompatibleDepth">
+        <rdfs:domain rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/WeightInitializationAlgorithm"/>
+        <rdfs:range rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artificial Neural Network Ontology</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indicates the minimum artificial neural network depth with which a weight initialization algorithm can be used.</skos:definition>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has minimum compatible depth</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Algorithm -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Algorithm">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dictionary.com</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A set of rules for solving a problem in a finite number of steps, as for finding the greatest common divisor.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neural network weights are chosen by an algorithm.</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">algorithm</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ArtificialNeuralNetwork -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ArtificialNeuralNetwork">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ComputationalModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/hasDepth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Techopedia</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A computational model based on the structure and functions of biological neural networks. Information that flows through the network affects the structure of the ANN because a neural network changes - or learns, in a sense - based on that input and output.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Depth is a property of Artificial Neural Networks.</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artificial neural network</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ComputationalModel -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ComputationalModel">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Model"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A computational model is a mathematical model in computational science that requires extensive computational resources to study the behavior of a complex system by computer simulation.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Many scientific fields use computational models to achieve results which are beyond traditional experimental methods.</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">computational model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/DeepArtificialNeuralNetwork -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/DeepArtificialNeuralNetwork">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ArtificialNeuralNetwork"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/hasDepth"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geoffrey Hinton</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An artificial neural network that has more than one layer of hidden units between its inputs and its outputs.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The artificial neural network used had more than one hidden layer, making it a deep artificial neural network.</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deep artificial neural network</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ExtremelyDeepArtificialNeuralNetwork -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ExtremelyDeepArtificialNeuralNetwork">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/DeepArtificialNeuralNetwork"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/hasDepth"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artificial Neural Network Ontology</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An artificial neural network that has ten or more layers of hidden units between its inputs and its outputs.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cutting edge artificial neural networks are often extremely deep artificial neural networks.</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extremely deep artificial neural network</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/FeedforwardArtificialNeuralNetwork -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/FeedforwardArtificialNeuralNetwork">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ArtificialNeuralNetwork"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Techopedia</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A neural network with outputs only going to next layer, no output is connected as input into a previous layer.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Depth is a property of Feedforward Artificial Neural Networks.</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feedforward artificial neural network</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/GaussianInitializationAlgorithm -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/GaussianInitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/WeightInitializationAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithActivationFunction"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ActivationFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HiddenLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HeInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/LecunUniformInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/OrthogonalInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/UniformInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/XavierInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ZeroInitializationAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/GradientDescentAlgorithm -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/GradientDescentAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/TrainingAlgorithm"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An algorithm which provides a way to find a local minimum of a function.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gradient descent is used for training a neural network</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gradient descent algorithm</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HeInitializationAlgorithm -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HeInitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/WeightInitializationAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithActivationFunction"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ActivationFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HiddenLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/LecunUniformInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/OrthogonalInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/UniformInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/XavierInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ZeroInitializationAlgorithm"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HeInitializationAlgorithm"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithActivationFunction"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ActivationFunction"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:seeAlso>K. He, X. Zhang, S. Ren, and J. Sun, “Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification,” 2015 IEEE International Conference on Computer Vision (ICCV), 2015.</rdfs:seeAlso>
+    </owl:Axiom>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HiddenLayer -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HiddenLayer">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Layer"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Josef Thomas Burger</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A layer responsible for intermediary calculations in a neural network.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Compose neural networks along with individual hidden units.</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hidden layer</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HiddenUnit -->
+
+    <rdf:Description rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HiddenUnit">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/isMemberOf"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HiddenLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Hyperparameter -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Hyperparameter">
+        <rdfs:subClassOf rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/Analytics/Variable"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colin Raffel</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A variable set before actually optimizing the model&apos;s parameters</skos:definition>
+        <skos:example>Weight initialization function choice is an example of a hyperparameter.</skos:example>
+        <skos:prefLabel>hyperparameter</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/IdentityInitializationAlgorithm -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/IdentityInitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/WeightInitializationAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithActivationFunction"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ActivationFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/SquareLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/TwoDimensionalLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/IdentityInitializationAlgorithm"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/SquareLayer"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:seeAlso>http://keras.io/initializations/</rdfs:seeAlso>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/IdentityInitializationAlgorithm"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/TwoDimensionalLayer"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:seeAlso>http://keras.io/initializations/</rdfs:seeAlso>
+    </owl:Axiom>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/InitializationAlgorithm -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/InitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Algorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ArtificialNeuralNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dictionary.com</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An algorithm which sets (variables, counters, switches, etc.) to their starting values at the beginning of a program or subprogram.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neural network weights must be decided with an initialization function.</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">initialization algorithm</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Layer -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Layer">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ArtificialNeuralNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Josef Thomas Burger</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A collection of a number of interconnected units which contain an activation function.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artificial Neural Networks are comprised of one or more layers.</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">layer</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/LecunUniformInitializationAlgorithm -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/LecunUniformInitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/WeightInitializationAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithActivationFunction"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ActivationFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HiddenLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/OrthogonalInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/UniformInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/XavierInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ZeroInitializationAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Model -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Model">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dictionary.com</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A simplified representation of a system or phenomenon, as in the sciences or economics, with any hypotheses required to describe the system or explain the phenomenon, often mathematically.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computational models are just one kind of model.</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/OrthogonalInitializationAlgorithm -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/OrthogonalInitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/WeightInitializationAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithActivationFunction"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ActivationFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/SquareLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/TwoDimensionalLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/UniformInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/XavierInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ZeroInitializationAlgorithm"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/OrthogonalInitializationAlgorithm"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/SquareLayer"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:seeAlso>http://keras.io/initializations/</rdfs:seeAlso>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/OrthogonalInitializationAlgorithm"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/TwoDimensionalLayer"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:seeAlso>http://keras.io/initializations/</rdfs:seeAlso>
+    </owl:Axiom>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/SquareLayer -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/SquareLayer">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Layer"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A layer in a neural network whose inputs&apos; dimensions are all equal.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Many convolutional layers are square layers.</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">square layer</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/TrainingAlgorithm -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/TrainingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Algorithm"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An algorithm which uses training data to fine tune the parameters of a machine learning model</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Training of a neural network updates its weights.</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">training algorithm</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/TwoDimensionalLayer -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/TwoDimensionalLayer">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Layer"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A layer in a neural network which has two dimensional input, such as a digital image.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Many convolutional layers are two dimensional layers.</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">two dimensional layer</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/UniformInitializationAlgorithm -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/UniformInitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/WeightInitializationAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithActivationFunction"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ActivationFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HiddenLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/XavierInitializationAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ZeroInitializationAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Unit -->
+
+    <rdf:Description rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Unit">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/isMemberOf"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Layer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Relations/Relations/isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ArtificialNeuralNetwork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Weight -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Weight">
+        <rdfs:subClassOf rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/Analytics/Variable"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/hasNumericValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/number"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <SpecificationMetadata:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artificial neural network</SpecificationMetadata:dependsOn>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Leverington</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Values associated with each vector and node in the network, which constrain how input data (e.g., satellite image values) are related to output data (e.g., land-cover classes).</skos:definition>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weight</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/WeightInitializationAlgorithm -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/WeightInitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/InitializationAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/hasMaximumCompatibleDepth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/hasMinimumCompatibleDepth"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <SpecificationMetadata:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Initialization algorithm.</SpecificationMetadata:dependsOn>
+        <SpecificationMetadata:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artificial neural network</SpecificationMetadata:dependsOn>
+        <SpecificationMetadata:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weight</SpecificationMetadata:dependsOn>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artificial Neural Network Ontology</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An algorithm used to initialize the weights of a neural network by randomly choosing from a probablility distribution.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The recommendation system chose a weight initialization algorithm to initialize the network.</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weight initialization algorithm</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/XavierInitializationAlgorithm -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/XavierInitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/WeightInitializationAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithActivationFunction"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/LinearActivationFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithLayerType"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HiddenLayer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ZeroInitializationAlgorithm"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/XavierInitializationAlgorithm"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithActivationFunction"/>
+                <owl:someValuesFrom rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/LinearActivationFunction"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:seeAlso>K. He, X. Zhang, S. Ren, and J. Sun, “Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification,” 2015 IEEE International Conference on Computer Vision (ICCV), 2015.</rdfs:seeAlso>
+    </owl:Axiom>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ZeroInitializationAlgorithm -->
+
+    <owl:Class rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ZeroInitializationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/WeightInitializationAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithActivationFunction"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ActivationFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/isCompatibleWithLayerType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/Layer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/GaussianInitializationAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/GaussianInitializationAlgorithm">
+        <rdf:type rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/GaussianInitializationAlgorithm"/>
+        <anno:hasMaximumCompatibleDepth rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">2</anno:hasMaximumCompatibleDepth>
+        <anno:hasMinimumCompatibleDepth rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">0</anno:hasMinimumCompatibleDepth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HeInitializationAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HeInitializationAlgorithm">
+        <rdf:type rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HeInitializationAlgorithm"/>
+        <anno:hasMinimumCompatibleDepth rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">0</anno:hasMinimumCompatibleDepth>
+        <anno:hasMinimumCompatibleDepth rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">100</anno:hasMinimumCompatibleDepth>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HeInitializationAlgorithm"/>
+        <owl:annotatedProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/hasMinimumCompatibleDepth"/>
+        <owl:annotatedTarget rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">0</owl:annotatedTarget>
+        <rdfs:seeAlso>K. He, X. Zhang, S. Ren, and J. Sun, “Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification,” 2015 IEEE International Conference on Computer Vision (ICCV), 2015.</rdfs:seeAlso>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HeInitializationAlgorithm"/>
+        <owl:annotatedProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/hasMinimumCompatibleDepth"/>
+        <owl:annotatedTarget rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">100</owl:annotatedTarget>
+        <rdfs:seeAlso>K. He, X. Zhang, S. Ren, and J. Sun, “Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification,” 2015 IEEE International Conference on Computer Vision (ICCV), 2015.</rdfs:seeAlso>
+    </owl:Axiom>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/IdentityInitializationAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/IdentityInitializationAlgorithm">
+        <rdf:type rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/IdentityInitializationAlgorithm"/>
+        <anno:hasMaximumCompatibleDepth rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">2</anno:hasMaximumCompatibleDepth>
+        <anno:hasMinimumCompatibleDepth rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">0</anno:hasMinimumCompatibleDepth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/LecunUniformInitializationAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/LecunUniformInitializationAlgorithm">
+        <rdf:type rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/LecunUniformInitializationAlgorithm"/>
+        <anno:hasMaximumCompatibleDepth rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">5</anno:hasMaximumCompatibleDepth>
+        <anno:hasMinimumCompatibleDepth rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">0</anno:hasMinimumCompatibleDepth>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/LecunUniformInitializationAlgorithm"/>
+        <owl:annotatedProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/hasMaximumCompatibleDepth"/>
+        <owl:annotatedTarget rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">5</owl:annotatedTarget>
+        <rdfs:seeAlso>Y. Lecun, L. Bottou, G. B. Orr, and K.-R. Müller, “Efficient BackProp,” Lecture Notes in Computer Science Neural Networks: Tricks of the Trade, pp. 9–50, 1998.</rdfs:seeAlso>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/LecunUniformInitializationAlgorithm"/>
+        <owl:annotatedProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/hasMinimumCompatibleDepth"/>
+        <owl:annotatedTarget rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">0</owl:annotatedTarget>
+        <rdfs:seeAlso>Y. Lecun, L. Bottou, G. B. Orr, and K.-R. Müller, “Efficient BackProp,” Lecture Notes in Computer Science Neural Networks: Tricks of the Trade, pp. 9–50, 1998.</rdfs:seeAlso>
+    </owl:Axiom>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/OrthogonalInitializationAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/OrthogonalInitializationAlgorithm">
+        <rdf:type rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/OrthogonalInitializationAlgorithm"/>
+        <anno:hasMaximumCompatibleDepth rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">2</anno:hasMaximumCompatibleDepth>
+        <anno:hasMinimumCompatibleDepth rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">0</anno:hasMinimumCompatibleDepth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/UniformInitializationAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/UniformInitializationAlgorithm">
+        <rdf:type rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/UniformInitializationAlgorithm"/>
+        <anno:hasMaximumCompatibleDepth rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">2</anno:hasMaximumCompatibleDepth>
+        <anno:hasMinimumCompatibleDepth rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">0</anno:hasMinimumCompatibleDepth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/XavierInitializationAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/XavierInitializationAlgorithm">
+        <rdf:type rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/XavierInitializationAlgorithm"/>
+        <anno:hasMaximumCompatibleDepth rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">100</anno:hasMaximumCompatibleDepth>
+        <anno:hasMinimumCompatibleDepth rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">0</anno:hasMinimumCompatibleDepth>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/XavierInitializationAlgorithm"/>
+        <owl:annotatedProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/hasMaximumCompatibleDepth"/>
+        <owl:annotatedTarget rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">100</owl:annotatedTarget>
+        <rdfs:seeAlso>X. Glorot, Y Bengio, “Understanding the difficulty of training deep feedforward neural networks,” International conference on artificial intelligence and statistics, pp. 249–256.</rdfs:seeAlso>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/XavierInitializationAlgorithm"/>
+        <owl:annotatedProperty rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/hasMinimumCompatibleDepth"/>
+        <owl:annotatedTarget rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">0</owl:annotatedTarget>
+        <rdfs:seeAlso>X. Glorot, Y Bengio, “Understanding the difficulty of training deep feedforward neural networks,” International conference on artificial intelligence and statistics, pp. 249–256.</rdfs:seeAlso>
+    </owl:Axiom>
+    
+
+
+    <!-- http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ZeroInitializationAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ZeroInitializationAlgorithm">
+        <rdf:type rdf:resource="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ZeroInitializationAlgorithm"/>
+        <anno:hasMaximumCompatibleDepth rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">0</anno:hasMaximumCompatibleDepth>
+        <anno:hasMinimumCompatibleDepth rdf:datatype="http://www.omg.org/spec/EDMC-FIBO/FND/Utilities/BusinessFacingTypes/nonNegativeWholeNumber">0</anno:hasMinimumCompatibleDepth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/GaussianInitializationAlgorithm">
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The recommendation system picked a Gaussian Initialization Algorithm to initialize the network because it was shallow.</skos:example>
+        <SpecificationMetadata:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gaussian density function</SpecificationMetadata:dependsOn>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A weight initialization function which picks from a Gaussian distribution.</skos:definition>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gaussian initialization algorithm</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artificial Neural Network Ontology</rdfs:isDefinedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/HeInitializationAlgorithm">
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The He initialization algorithm is appropriate for deep artificial neural networks with nonlinear activation functions.</skos:example>
+        <SpecificationMetadata:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uniform density function</SpecificationMetadata:dependsOn>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A weight initialization function which picks from a Uniform distribution in a normalized range. This normalized range differs from Xavier initialization in that it considers rectifier nonlinearities.</skos:definition>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He initialization function</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/IdentityInitializationAlgorithm">
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A weight initialization algorithm appropriate for square two dimensional layers, which makes the N x N weight matrix the N x N identity matrix.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The identity initialization algorithm is appropriate for square 2D layers.</skos:example>
+        <skos:prefLabel>identity initialization algorithm</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/LecunUniformInitializationAlgorithm">
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A weight initialization algorithm which picks from a uniform distribution and is scaled by the square root of the number of inputs.</skos:definition>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lecun uniform initialization algorithm</skos:prefLabel>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Lecun uniform initialization algorithm was first proposed in 1998.</skos:example>
+        <SpecificationMetadata:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uniform density function</SpecificationMetadata:dependsOn>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/OrthogonalInitializationAlgorithm">
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A weight initialization algorithm appropriate for square two dimensional layers, which makes the N x N weight matrix an N x N orthogonal matrix.</skos:definition>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">orthogonal initialization algorithm</skos:prefLabel>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The orthogonal initialization algorithm is appropriate for square 2D layers.</skos:example>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/UniformInitializationAlgorithm">
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uniform initialization algorithm</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keras</rdfs:isDefinedBy>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The uniform initialization algorithm is appropriate for small, simple neural networks.</skos:example>
+        <SpecificationMetadata:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uniform density function</SpecificationMetadata:dependsOn>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A weight initialization algorithm which picks from a uniform density function.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/XavierInitializationAlgorithm">
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xavier Glorot</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A weight initialization function which picks from a Uniform distribution in a normalized range.</skos:definition>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The recommendation system picked a Xavier Initialization Algorithm to initialize the network because it was deep.</skos:example>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xavier initialization algorithm</skos:prefLabel>
+        <SpecificationMetadata:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uniform density function</SpecificationMetadata:dependsOn>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://tw.rpi.edu/web/Courses/Ontologies/2016/OE_6_Team_Cerebral/ZeroInitializationAlgorithm">
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keras</rdfs:isDefinedBy>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zero initialization algorithm</skos:prefLabel>
+        <skos:example rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The zero initialization algorithm should almost always be avoided.</skos:example>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A weight initialization algorithm which assigns a value of zero to each weight.</skos:definition>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
+
